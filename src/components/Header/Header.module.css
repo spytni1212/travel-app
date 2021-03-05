@@ -1,0 +1,10 @@
+.header {
+    background-color: rgba(144, 227, 233, 1)
+}
+
+.headerWrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+}
