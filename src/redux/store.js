@@ -2,7 +2,7 @@ import { combineReducers, createStore, compose } from 'redux';
 import mainPageReducer from './mainPage-reducer';
 
 let reducers = combineReducers({
-    mainPage : mainPageReducer
+    mainPage : mainPageReducer,
 })
 
 let store = createStore(reducers, compose(

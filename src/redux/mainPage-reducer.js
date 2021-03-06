@@ -1,15 +1,15 @@
 let initialState = {
     countriesCardsData : [
-        { id: '1' },
-        { id: '2' },
-        { id: '3' },
-        { id: '4' },
-        { id: '5' },
-        { id: '6' },
-        { id: '7' },
-        { id: '8' },
-        { id: '9' },
-        { id: '10'}
+        { id: '1', country: 'Russia', capital: 'Moscow' },
+        { id: '2', country: 'Germany', capital: 'Berlin' },
+        { id: '3', country: 'France', capital: 'Paris' },
+        { id: '4', country: 'Great Britain', capital: 'London' },
+        { id: '5', country: 'Belarus', capital: 'Minsk' },
+        { id: '6', country: 'Italy', capital: 'Rome' },
+        { id: '7', country: 'China', capital: 'Beijing' },
+        { id: '8', country: 'USA', capital: 'Washington' },
+        { id: '9', country: 'Turkey', capital: 'Istanbul' },
+        { id: '10', country: 'Canada', capital: 'Ottawa'}
     ]
 }
 
