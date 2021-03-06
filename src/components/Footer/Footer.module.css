@@ -1,0 +1,15 @@
+.footer {
+    background-color: rgba(144, 227, 233, 1)
+}
+
+.footerWrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    padding: 20px 0;
+    font-size: 24px;
+}
