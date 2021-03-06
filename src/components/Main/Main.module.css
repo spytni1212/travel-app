@@ -1,0 +1,23 @@
+.mainWrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardsContainer {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    column-gap: 20px;
+    row-gap: 40px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: blueviolet;
+}
