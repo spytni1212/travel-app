@@ -1,0 +1,9 @@
+.videoContainer {
+    padding: 50px 0;
+}
+
+.video {
+    width: 650px;
+    height: 250px;
+    background-color: rgb(69, 46, 150);
+}

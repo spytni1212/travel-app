@@ -1,0 +1,15 @@
+.attractionsContainer {
+    display: flex;
+    column-gap: 20px;
+}
+
+.attractionDescription {
+    max-width: 500px;
+    text-align: justify;
+}
+
+.attractionSlider {
+    width: 450px;
+    height: 250px;
+    background-color: chartreuse;
+}

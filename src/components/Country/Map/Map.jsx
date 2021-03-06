@@ -3,8 +3,8 @@ import s from './Map.module.css';
 
 const Map = (props) => {
     return (
-        <div>
-            <div>Map</div>
+        <div className={s.mapContainer}>
+            <div className={s.map}>Map</div>
         </div>
     )
 }

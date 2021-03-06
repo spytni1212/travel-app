@@ -3,8 +3,8 @@ import s from './Video.module.css';
 
 const Video = (props) => {
     return (
-        <div>
-            <div>video about country</div>
+        <div className={s.videoContainer}>
+            <div className={s.video}>video about country</div>
         </div>
     )
 }
