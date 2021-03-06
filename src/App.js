@@ -1,16 +1,22 @@
+import React from 'react';
+import { BrowserRouter, NavLink, Route } from "react-router-dom";
 import './App.css';
 import Header from './components/Header/Header';
-import Main from './components/Main/Main';
+import MainContainer from './components/Main/MainContainer';
 import Footer from './components/Footer/Footer';
+import CountryContainer from './components/Country/CountryContainer';
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Header />
-      <Main />
+      <Route path = '/' component = {MainContainer} exact/>
+      <Route path = '/country/:countryId' component = {CountryContainer} />
       <Footer />
-    </div>
+    </BrowserRouter>
+      
+    
+      
   );
 }
-
 export default App;
