@@ -4,7 +4,7 @@ import s from './Weather.module.css';
 const Weather = (props) => {
     return (
         <div>
-            <div>date now</div>
+            <div>weather</div>
         </div>
     )
 }
