@@ -13,6 +13,6 @@ const countryReducer = (state = initialState, action) => {
     }
 }
 
-export const setCountryDataAC = (countryData) => ({ type:SET_COUNTRY_DATA, countryData })
+export const setCountryDataAC = (countryData) => ({ type: SET_COUNTRY_DATA, countryData })
 
 export default countryReducer;
