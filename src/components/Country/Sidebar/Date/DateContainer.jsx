@@ -1,20 +1,20 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { setYearAC, setMonthNameAC, setDataAC, 
-         setWeekdayNameAC, setHourAC, setMinAC, setSecAC } from '../../../../redux/date-reducer';
+import { setYear, setMonthName, setData, 
+         setWeekdayName, setHour, setMin, setSec } from '../../../../redux/date-reducer';
 import s from './Date.module.css';
 
 class  DateContainer extends React.Component {
 
     componentDidMount() {
-        
         window.showDate = setInterval(() =>{
             this.showDate()
         }, 1000)
     }
 
     showDate() {
-        let today = new Date(),
+        let currentDate = new Date().toLocaleString('en-US', { timeZone: this.props.countryData.timeZone });
+        let today = new Date(currentDate),
         year = today.getFullYear(),
         month = today.getMonth(),
         data = this.addZero(today.getDate()),
@@ -76,31 +76,4 @@ let mapStateToProps = (state) => {
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
-    return {
-        setYear: (year) => {
-            dispatch(setYearAC(year));
-        },
-        setMonthName: (monthName) => {
-            dispatch(setMonthNameAC(monthName));
-        },
-        setData: (data) => {
-            dispatch(setDataAC(data));
-        },
-        setWeekdayName: (weekdayName) => {
-            dispatch(setWeekdayNameAC(weekdayName));
-        },
-        setHour: (hour) => {
-            dispatch(setHourAC(hour));
-        },
-        setMin: (min) => {
-            dispatch(setMinAC(min));
-        },
-        setSec: (sec) => {
-            dispatch(setSecAC(sec));
-        },
-
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(DateContainer);
+export default connect(mapStateToProps, {setYear, setMonthName, setData, setWeekdayName, setHour, setMin, setSec})(DateContainer);
