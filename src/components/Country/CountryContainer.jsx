@@ -2,13 +2,16 @@ import React from 'react'
 import Country from './Country';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { setCountryDataAC } from '../../redux/country-reducer';
 
 const CountryContainer = (props) => {
+    
     let countryDataId = props.match.params.countryId
     let countryDataInfo = props.countriesData.find(countryData => countryData.id === countryDataId)
-    console.log(countryDataInfo)
+    
+    props.setCountryData(countryDataInfo);
     return (
-        <Country countryData = {countryDataInfo}/>
+        <Country />
     )
 }
 
@@ -20,7 +23,9 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-
+        setCountryData: (countryData) => {
+            dispatch(setCountryDataAC(countryData))
+        }
     }
 }
 
