@@ -71,7 +71,7 @@ class  DateContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        countryData: state.countryData.countryData,
+        countryData: state.mainPage.currentCountry,
         date: state.date
     }
 }
