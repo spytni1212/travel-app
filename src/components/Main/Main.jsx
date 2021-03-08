@@ -6,7 +6,7 @@ const Main = (props) => {
    
     let state = props.mainPage;
 
-    let countriesCards = state.countriesCardsData.map(countryCard => <NavLink to={`/country/${countryCard.id}`}><div className={s.card} key={countryCard.id}>{countryCard.id}</div></NavLink>)
+    let countriesCards = state.countriesCardsData.map(countryCard => <NavLink to={`/country/${countryCard.id}`} key={countryCard.id}><div className={s.card}>{countryCard.id}</div></NavLink>)
 
     return (
         <div className={s.mainContainer}>

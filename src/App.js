@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, NavLink, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import './App.css';
 import Header from './components/Header/Header';
 import MainContainer from './components/Main/MainContainer';
@@ -13,10 +13,7 @@ function App() {
       <Route path = '/' component = {MainContainer} exact/>
       <Route path = '/country/:countryId' component = {CountryContainer} />
       <Footer />
-    </BrowserRouter>
-      
-    
-      
+    </BrowserRouter>   
   );
 }
 export default App;
