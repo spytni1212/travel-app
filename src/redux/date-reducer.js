@@ -37,12 +37,12 @@ const dateReducer = (state = initialState, action) => {
     }
 }
 
-export const setYearAC = (year) => ({ type: SET_YEAR, year })
-export const setMonthNameAC = (month) => ({ type: SET_MONTH_NAME, month })
-export const setDataAC = (data) => ({ type: SET_DATA, data })
-export const setWeekdayNameAC = (weekdayName) => ({ type: SET_WEEKDAY_NAME, weekdayName })
-export const setHourAC = (hour) => ({ type: SET_HOUR, hour })
-export const setMinAC = (min) => ({ type: SET_MIN, min })
-export const setSecAC = (sec) => ({ type: SET_SEC, sec })
+export const setYear = (year) => ({ type: SET_YEAR, year })
+export const setMonthName = (month) => ({ type: SET_MONTH_NAME, month })
+export const setData = (data) => ({ type: SET_DATA, data })
+export const setWeekdayName = (weekdayName) => ({ type: SET_WEEKDAY_NAME, weekdayName })
+export const setHour = (hour) => ({ type: SET_HOUR, hour })
+export const setMin = (min) => ({ type: SET_MIN, min })
+export const setSec = (sec) => ({ type: SET_SEC, sec })
 
 export default dateReducer;
