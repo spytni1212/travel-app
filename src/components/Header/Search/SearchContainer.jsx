@@ -1,16 +1,28 @@
 import React from 'react'
 import Search from './Search';
+import {setValue} from '../../../redux/search-reducer'
+import { connect } from 'react-redux';
 import s from './Search.module.css'
 
 const SearchContainer = (props) => {
 
+    let state = props.search;
+
     const inputSearch = (e) => {
-        console.log(e.target.value)
+        props.setValue(e.target.value)
     }
 
     return (
-        <Search inputSearch={inputSearch}/>
+        <Search inputSearch={inputSearch} value={state.value}/>
     )
 }
 
-export default SearchContainer;
+let mapStateToProps = (state) => {
+    return {
+        search: state.search
+    }
+}
+
+
+
+export default connect(mapStateToProps,{setValue})(SearchContainer);

@@ -1,12 +1,11 @@
 import React from 'react'
 import s from './Search.module.css'
 
-const Search = ({inputSearch}) => {
-
+const Search = ({inputSearch, value}) => {
 
     return (
         <div className={s.searchContainer}>
-            <input type="text" placeholder='search country...' onChange={inputSearch}/>
+            <input type="text" value={value} placeholder='search country...' onChange={inputSearch}/>
         </div>
     )
 }
