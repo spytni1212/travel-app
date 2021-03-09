@@ -13,7 +13,7 @@ let initialState = {
         { id: '9', country: 'Turkey', capital: 'Istanbul', capitalIMG: "./img/Turkey/Istanbul.jpg", timeZone: 'Europe/Istanbul' },
         { id: '10', country: 'Canada', capital: 'Ottawa', capitalIMG: "./img/Canada/Ottawa.jpg", timeZone: 'Etc/GMT-5'}
     ],
-    currentCountry: {}
+    currentCountry: {},
 }
 
 const mainPageReducer = (state = initialState, action) => {
