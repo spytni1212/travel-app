@@ -4,10 +4,10 @@ import CardContainer from './Card/CardContainer';
 import s from './Main.module.css';
 
 const Main = (props) => {
-   
+
     let state = props.mainPage;
 
-    let countriesCards = state.countriesCardsData.map(countryCard => 
+    let countriesCards = state.copyCountryData.map(countryCard => 
         <NavLink to={`/country/${countryCard.id}`} key={countryCard.id}>
             <CardContainer {...countryCard}/>
         </NavLink>)
@@ -19,7 +19,6 @@ const Main = (props) => {
                     {countriesCards}
                 </div>
             </div>
-            
         </div>
     )
 }

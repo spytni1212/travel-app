@@ -2,8 +2,10 @@ import { combineReducers, createStore, compose } from 'redux';
 import mainPageReducer from './mainPage-reducer';
 import dateReducer from './date-reducer';
 import searchReducer from './search-reducer';
+import appReducer from './app-reducer';
 
 let reducers = combineReducers({
+    app: appReducer,
     mainPage : mainPageReducer,
     date: dateReducer,
     search: searchReducer
