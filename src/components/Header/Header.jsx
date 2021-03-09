@@ -1,4 +1,5 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
 import s from './Header.module.css';
 import Logo from './Logo/Logo';
 import Search from './Search/Search';
@@ -9,7 +10,7 @@ const Header = (props) => {
         <div className = {s.header}>
             <div className = {s.headerWrapper}>
                 <Logo />
-                <Search />
+                <Route path='/' component = {Search} exact/>
                 <Language />
             </div>
         </div>

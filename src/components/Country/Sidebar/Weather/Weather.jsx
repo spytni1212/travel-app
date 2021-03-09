@@ -1,12 +1,14 @@
-import React from 'react'
-import s from './Weather.module.css';
+import React from 'react';
+import style from './Weather.module.css';
 
-const Weather = (props) => {
-    return (
-        <div>
-            <div>weather</div>
+const Weather = (props) => (
+    <div>
+        <div>{Math.round(props.temperature)}°C
+            <i className={`${style.icon} owf owf-${props.icon}`}/>
         </div>
-    )
-}
-
+        <div>{props.weatherDescription}</div>
+        <div>humidity: {props.humidity}%</div>
+        <div>wind: {props.wind} m/s</div>  
+    </div>
+)
 export default Weather;
