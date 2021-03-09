@@ -3,12 +3,14 @@ import mainPageReducer from './mainPage-reducer';
 import dateReducer from './date-reducer';
 import searchReducer from './search-reducer';
 import appReducer from './app-reducer';
+import weatherReducer from './weatherReducer';
 
 let reducers = combineReducers({
     app: appReducer,
     mainPage : mainPageReducer,
     date: dateReducer,
-    search: searchReducer
+    search: searchReducer,
+    weather: weatherReducer,
 })
 
 let store = createStore(reducers, compose(

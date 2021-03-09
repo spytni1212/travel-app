@@ -5,6 +5,9 @@ import { withRouter } from 'react-router-dom';
 import { setCurrentCountryDataAC } from '../../redux/mainPage-reducer';
 
 const CountryContainer = (props) => {
+
+    
+
     let countryDataId = props.match.params.countryId
     let countryDataInfo = props.countriesData.find(countryData => countryData.id === countryDataId)
     
@@ -16,7 +19,7 @@ const CountryContainer = (props) => {
 
 let mapStateToProps = (state) => {
     return {
-        countriesData: state.mainPage.countriesCardsData
+        countriesData: state.app.countriesCardsData
     }
 }
 
