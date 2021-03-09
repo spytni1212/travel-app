@@ -1,6 +1,7 @@
 const SET_CURRENT_COUNTRY_DATA = 'SET_CURRENT_COUNTRY_DATA';
 const SET_COPY_CONTRIES_DATA = 'SET_COPY_CONTRIES_DATA';
 
+
 let initialState = {
     copyCountryData: [],
     currentCountry: {}
