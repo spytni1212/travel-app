@@ -4,11 +4,8 @@ import Main from './Main';
 import { setCopyContriesDataAC } from '../../redux/mainPage-reducer';
 
 const MainContainer = (props) => {
-    let state = props.app
-    
-
     useEffect(()=>{
-        props.setCopyContriesDataAC(state.countriesCardsData)
+        props.setCopyContriesDataAC(props.app.countriesCardsData)
     },[])
 
     return (<Main {...props}/>)
