@@ -13,10 +13,7 @@ function App() {
       <Route path = '/' component = {MainContainer} exact/>
       <Route path = '/country/:countryId' component = {CountryContainer} />
       <Footer />
-    </BrowserRouter>
-      
-    
-      
+    </BrowserRouter>   
   );
 }
 export default App;
