@@ -1,10 +1,9 @@
 import s from './Card.module.css'
-import './CardAnimate'
 
 const Card = ({countryId, capitalIMG, country, capital}) => {
   let cathedral = './img/Russia/cathedral-removebg.png'
   let img = {
-    'background-image': `url(${capitalIMG})`
+    'backgroundImage': `url(${capitalIMG})`
   };
 
   return (
