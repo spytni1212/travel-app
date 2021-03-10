@@ -2,7 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import s from './Header.module.css';
 import Logo from './Logo/Logo';
-import Search from './Search/Search';
+import SearchContainer from './Search/SearchContainer';
 import Language from './Languages/Language';
 
 const Header = (props) => {
@@ -10,7 +10,7 @@ const Header = (props) => {
         <div className = {s.header}>
             <div className = {s.headerWrapper}>
                 <Logo />
-                <Route path='/' component = {Search} exact/>
+                <Route path='/' component = {SearchContainer} exact/>
                 <Language />
             </div>
         </div>

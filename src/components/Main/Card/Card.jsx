@@ -3,7 +3,7 @@ import s from './Card.module.css'
 const Card = ({countryId, capitalIMG, country, capital}) => {
 
   let img = {
-    'background-image': `url(${capitalIMG})`
+    'backgroundImage': `url(${capitalIMG})`
   };
 
   return (

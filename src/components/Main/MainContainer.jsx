@@ -1,17 +1,22 @@
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
 import Main from './Main';
+import { setCopyContriesDataAC } from '../../redux/mainPage-reducer';
+
+const MainContainer = (props) => {
+    useEffect(()=>{
+        props.setCopyContriesDataAC(props.app.countriesCardsData)
+    },[])
+
+    return (<Main {...props}/>)
+}
 
 
 const mapStateToProps = (state) => {
     return {
-        mainPage: state.mainPage
+        app: state.app,
+        mainPage: state.mainPage,
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {}
-}
-
-const MainContainer = connect(mapStateToProps, mapDispatchToProps)(Main);
-
-export default MainContainer;
+export default connect(mapStateToProps, {setCopyContriesDataAC})(MainContainer);

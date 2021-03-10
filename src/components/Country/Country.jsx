@@ -6,7 +6,7 @@ import Attractions from './Attractions/Attractions';
 import Video from './Video/Video';
 import Map from './Map/Map';
 
-const CountryContainer = (props) => {
+const Country = (props) => {
     return (
         <div className={s.country}>
             <Sidebar />
@@ -18,4 +18,4 @@ const CountryContainer = (props) => {
     )
 }
 
-export default CountryContainer
+export default Country
