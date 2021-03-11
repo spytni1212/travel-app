@@ -2,6 +2,7 @@ import React from 'react'
 import s from './Attractions.module.css';
 
 const Attractions = (props) => {
+    console.log(props)
     return (
         <div className={s.attractionsContainer}>
             <div className={s.attractionDescription}>
