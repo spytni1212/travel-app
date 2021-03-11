@@ -1,8 +1,9 @@
-import React from 'react'
-import Search from './Search';
-import {setValue} from '../../../redux/search-reducer'
-import { connect } from 'react-redux';
-import s from './Search.module.css'
+import React from "react";
+import Search from "./Search";
+import { setValue } from "../../../redux/search-reducer";
+import { connect } from "react-redux";
+import { setCopyContriesDataAC } from "../../../redux/mainPage-reducer";
+import s from "./Search.module.css";
 // import { setCopyContriesDataAC } from '../../redux/mainPage-reducer'
 
 // function addFilterIfNotExists(filter, appliedFilters) {
@@ -18,55 +19,51 @@ import s from './Search.module.css'
 //     return appliedFilters;
 // }
 
-
 const SearchContainer = (props) => {
-    
-    // let stateMain = props.mainPage;
-    let state = props.search;
 
-    const inputSearch = (e) => {
-        props.setValue(e.target.value)
+  let stateApp = props.app;
+  let state = props.search;
 
-        // let newState = Object.assign({}, stateMain.copyCountryData);
-        //     let value = e.target.value;
-        //     let filteredValues = newState.filter(country => {
-        //         return country.country.toLowerCase().includes(value) ||
-        //         country.capital.toLowerCase().includes(value);
-        //     });
-
-            
-        //     console.log(newState)
-            // if (value) {
-            //     appliedFilters = addFilterIfNotExists(FILTER_BY_VALUE, appliedFilters);
-
-            //     newState.filteredProducts = filteredValues;
-            //     newState.filteredCount = newState.filteredProducts.length;
-            //     newState.filteredPages = Math.ceil(newState.filteredCount / newState.countPerPage);
-
-            // } else {
-            //     appliedFilters = removeFilter(FILTER_BY_VALUE, appliedFilters);
-
-            //     if (appliedFilters.length === 0) {
-            //         newState.filteredProducts = newState.products;
-            //         newState.filteredCount = newState.filteredProducts.length;
-            //         newState.filteredPages = Math.ceil(newState.filteredCount / newState.countPerPage);
-            //     }
-            // }
-            // setCopyContriesDataAC(newState)
+    const clearValur = () => {
+        props.setValue('');
+        props.setCopyContriesDataAC(stateApp.countriesCardsData);
     }
 
-    return (
-        <Search inputSearch={inputSearch} value={state.value}/>
-    )
-}
+  const inputSearch = (e) => {
+    props.setValue(e.target.value);
+    let newState = stateApp.countriesCardsData.slice();
+
+    const filterArr = newState
+      .filter((p) => {
+        return  p.country.toLowerCase().includes(e.target.value) || p.capital.toLowerCase().includes(e.target.value) || p.country.toUpperCase().includes(e.target.value) || p.capital.toUpperCase().includes(e.target.value);
+      }).slice(0, 15);
+      
+      props.setCopyContriesDataAC(filterArr);
+  };
+
+  const buttonSearch = (value) => {
+
+    let newState = stateApp.countriesCardsData.slice();
+
+    const filterArr = newState
+      .filter((p) => {
+        return  p.country.toLowerCase().includes(value) || p.capital.toLowerCase().includes(value) || p.country.toUpperCase().includes(value) || p.capital.toUpperCase().includes(value);
+      }).slice(0, 15);   
+    
+    props.setCopyContriesDataAC(filterArr);
+  }
+
+  return <Search inputSearch={inputSearch} buttonSearch={buttonSearch} clearValur={clearValur} value={state.value} />;
+};
 
 let mapStateToProps = (state) => {
-    return {
-        // mainPage: state.mainPage,
-        search: state.search
-    }
-}
+  return {
+    app: state.app,
+    mainPage: state.mainPage,
+    search: state.search,
+  };
+};
 
-
-
-export default connect(mapStateToProps,{setValue})(SearchContainer);
+export default connect(mapStateToProps, { setValue, setCopyContriesDataAC })(
+  SearchContainer
+);
