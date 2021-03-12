@@ -4,30 +4,18 @@ import { setValue } from "../../../redux/search-reducer";
 import { connect } from "react-redux";
 import { setCopyContriesDataAC } from "../../../redux/mainPage-reducer";
 import s from "./Search.module.css";
-// import { setCopyContriesDataAC } from '../../redux/mainPage-reducer'
-
-// function addFilterIfNotExists(filter, appliedFilters) {
-//     let index = appliedFilters.indexOf(filter);
-//     if (index===-1) appliedFilters.push(filter);
-
-//     return appliedFilters;
-// }
-
-// function removeFilter(filter, appliedFilters) {
-//     let index = appliedFilters.indexOf(filter);
-//     appliedFilters.splice(index, 1);
-//     return appliedFilters;
-// }
 
 const SearchContainer = (props) => {
 
   let stateApp = props.app;
   let state = props.search;
 
-    const clearValur = () => {
+
+
+  const clearValur = () => {
         props.setValue('');
         props.setCopyContriesDataAC(stateApp.countriesCardsData);
-    }
+  }
 
   const inputSearch = (e) => {
     props.setValue(e.target.value);
@@ -53,7 +41,7 @@ const SearchContainer = (props) => {
     props.setCopyContriesDataAC(filterArr);
   }
 
-  return <Search inputSearch={inputSearch} buttonSearch={buttonSearch} clearValur={clearValur} value={state.value} />;
+  return <Search inputSearch={inputSearch} buttonSearch={buttonSearch} clearValur={clearValur} value={state.value}/>;
 };
 
 let mapStateToProps = (state) => {

@@ -1,31 +1,109 @@
 .card {
-  position: relative;
-  margin-top: 50px;
-  width: 300px;
-  height: 400px;
-  background-size: cover;
+  margin: 10px;
+  /* transform: perspective(800px); */
+  /* transform-style: preserve-3d; */
+  cursor: pointer;
 }
 
-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  left: 0;
-  border: 1px solid;
+
+
+.container {
+  /* width: 30ch;
+  height: 45ch; */
+
+  width: 240px;
+  height: 320px;
+
+  flex: 0 0 240px;
+
   border-radius: 25px;
+
+  background: grey;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+
+  transition: box-shadow 0.5s;
+  /* will-change: transform; */
+  /* border: 15px solid white; */
+
+  /* //// */
+
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+  box-shadow: inset #333 0 0 0 5px, inset rgb(255 255 255 / 50%) 0 0 0 6px;
+
+}
+
+.container:hover {
+  box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+}
+
+.items {
+  box-sizing: content-box;
+
+  height: 100%;
+  width: 100%;
+
+  padding: 20px;
+
+  position: absolute;
+  top: -20px;
+  left: -20px;
+
+  background-size:  cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  
+  opacity: 0.7;
+
+  
+}
+
+.cardInfo {
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  transform: translateY(40%);
+}
+
+.cardInfo h1 {
+  font-family: "Playfair Display";
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: rgb(0 0 0 / 50%) 0 10px 10px;
 }
 
 .text {
   position: absolute;
-  width: 100%;
-  left: 0;
-  top: 120px;
-  font-weight: 700;
-  font-size: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  z-index: 1;
-  transition: top .5s ease;
+}
+
+.card1 {
+  /* position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+  min-width: 6ch;
+  min-height: 6ch;
+  width: 5vw;
+  height: 5vw;
+  max-width: 10ch;
+  max-height: 10ch;
+  background-color:crimson;
+
+  left: 50%;
+  top: 50%; */
+
+  border-radius: 50%;
+  background-color:crimson;
+
+  position: absolute;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+
+  width: 25ch;
+  height: 25ch;
 }
