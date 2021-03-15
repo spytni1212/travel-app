@@ -5,6 +5,8 @@ import searchReducer from './search-reducer';
 import appReducer from './app-reducer';
 import currencyReducer from './currency-reducer';
 import weatherReducer from './weatherReducer';
+import countryReducer from './countryReducer';
+
 
 let reducers = combineReducers({
     app: appReducer,
@@ -13,6 +15,7 @@ let reducers = combineReducers({
     search: searchReducer,
     currency: currencyReducer,
     weather: weatherReducer,
+    country:countryReducer,
 })
 
 let store = createStore(reducers, compose(

@@ -6,7 +6,7 @@ import { setCurrentCountryDataAC } from '../../redux/mainPage-reducer';
 
 const CountryContainer = (props) => {
 
-
+    console.log(props)
     let countryDataId = props.match.params.countryId
     let countryDataInfo = props.countriesData.find(countryData => countryData.id === countryDataId)
     
