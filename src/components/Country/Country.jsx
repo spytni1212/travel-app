@@ -2,7 +2,7 @@ import React from 'react'
 import s from './Country.module.css';
 import Sidebar from './Sidebar/Sidebar';
 import CountryDescription from './CountryDescription/CountryDescription';
-import Attractions from './Attractions/Attractions';
+import AttractionsContainer from './Attractions/AttractionsContainer';
 import Video from './Video/Video';
 import Map from './Map/Map';
 
@@ -11,7 +11,7 @@ const Country = (props) => {
         <div className={s.country}>
             <Sidebar />
             <CountryDescription />
-            <Attractions />
+            <AttractionsContainer />
             <Video />
             <Map />
         </div>

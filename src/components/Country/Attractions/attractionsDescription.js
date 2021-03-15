@@ -1,4 +1,4 @@
-const attractionsDescription = new Map({
+const attractionsDescription = {
     'Russia': [
         {
             name:"Moscow Kremlin",
@@ -77,7 +77,7 @@ const attractionsDescription = new Map({
             description:"The largest art museum in the world, the Louvre, is also a historic monument in Paris, France. The museum is a former royal palace where French Kings dwelt. The museum tops in art gallery collections, including many Western Civilization collections. In this museum, you can see the 30 000 collections of art. The collection is massive, and you will need several weeks to finish them. "
         }
     ],
-    'Great Britain': [
+    'GreatBritain': [
         {
             name: "Tower of London",
             description:" Tower of London is one of the world's most famous fortresses and home to the priceless Crown Jewels. Built as a royal residence and prison nearly 1,000 years ago, there are some fascinating stories within its walls. Visitors today can take a guided tour from the famous Beefeaters, witness the centuries-old Ceremony of the Keys."
@@ -259,6 +259,6 @@ const attractionsDescription = new Map({
             description:"At the entrance to St. John's harbor, overlooking the city and sea, is Signal Hill National Historic Site. It was here, in 1901, that the first wireless transatlantic signal was received. It also played a strategic role in the Seven Years war with France, although the current fortifications were built during the hostilities of 1812. The Cabot Tower is one of the key sites of Signal Hill. It was built in 1897 to mark the four hundredth anniversary of the discovery of Newfoundland."
         }
     ]
-})
+}
 
 export default attractionsDescription;
