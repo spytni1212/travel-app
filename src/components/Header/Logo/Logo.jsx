@@ -4,8 +4,8 @@ import s from './Logo.module.css'
 
 const Logo = (props) => {
     return (
-        <NavLink to='/'>
-            <div className = {s.logo}>
+        <NavLink to='/' className = {s.logo}>
+            <div >
                 My Travel App
             </div>
         </NavLink>
