@@ -8,12 +8,15 @@ import CountryContainer from './components/Country/CountryContainer';
 
 function App() {
   return (
-    <BrowserRouter>
+    <div className='main'>
+      <BrowserRouter>
       <Header />
       <Route path = '/' component = {MainContainer} exact/>
       <Route path = '/country/:countryId' component = {CountryContainer} />
       <Footer />
-    </BrowserRouter>   
+    </BrowserRouter>  
+    </div>
+     
   );
 }
 export default App;

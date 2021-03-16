@@ -19,8 +19,12 @@
     background-position: center;
     background-size: cover;
 }
+
+.attractionDescription {
+    font-weight: bold;
+}
 .slick-next:before, .slick-prev:before {
-    color: #039e9e;
+    color: #000000;
     font-size: 25px;
 }
 .slick-next:hover, .slick-prev:hover {

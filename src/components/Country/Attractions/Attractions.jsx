@@ -34,7 +34,7 @@ export default class Attractions extends Component {
                 <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', height:'778px'}}>
                   <div>
                     <h3>{attractionDescription[country][index].name}</h3>
-                    <p>{attractionDescription[country][index].description}</p>
+                    <p className='attractionDescription'>{attractionDescription[country][index].description}</p>
                   </div>
                   <div style={{backgroundImage: `url(${baseUrl}/${index+1}.jpeg)`}} className="attractionSlider__img"></div>
                 </div>

@@ -1,5 +1,6 @@
 .footer {
-    background-color: rgba(144, 227, 233, 1)
+    background-color: rgba(144, 227, 233, 1);
+    margin-top: auto;
 }
 
 .footerWrapper {

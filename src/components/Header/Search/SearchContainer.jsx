@@ -3,7 +3,6 @@ import Search from "./Search";
 import { setValue } from "../../../redux/search-reducer";
 import { connect } from "react-redux";
 import { setCopyContriesDataAC } from "../../../redux/mainPage-reducer";
-import s from "./Search.module.css";
 
 const SearchContainer = (props) => {
 

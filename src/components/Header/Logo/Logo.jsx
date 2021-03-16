@@ -5,9 +5,7 @@ import s from './Logo.module.css'
 const Logo = (props) => {
     return (
         <NavLink to='/' className = {s.logo}>
-            <div >
-                My Travel App
-            </div>
+            <span className={s.logoText}>My Travel App</span>
         </NavLink>
         
     )
