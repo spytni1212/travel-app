@@ -8,3 +8,21 @@
     align-items: center;
     background-color: cadetblue;
 }
+
+@media (max-width: 767px) {
+        .sidebar {
+        position: static;
+        width: 100%;
+        top: 0;
+        right: 0;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 460px) {
+    .sidebar {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}

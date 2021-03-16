@@ -17,7 +17,7 @@ class CurrencyContainer extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className={s.currencyContainer}>
                 <div>Currency: {this.props.countryCurrency.currency}</div>
                 <div>
                     <div>1 {this.props.countryCurrency.currency} = {this.props.currency.byn} BYN</div>

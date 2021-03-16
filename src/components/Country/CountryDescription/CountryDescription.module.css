@@ -11,14 +11,29 @@
 }
 
 .imageContainer {
-    position: relative;
+    /* position: relative; */
     flex: 0 1 27%;
     min-height: 200px;
 }
 
 .imageCountry {
-    position: absolute;
+    /* position: absolute; */
     max-width: 100%;
     object-fit: cover;
     background-color: rgb(123, 151, 95);
+}
+
+@media (max-width: 767px) {
+    .countryDescriptionContainer {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .description {
+        flex: 0 1 50%;
+    }
+
+    .imageContainer {
+        flex: 0 1 50%;
+    }
 }
