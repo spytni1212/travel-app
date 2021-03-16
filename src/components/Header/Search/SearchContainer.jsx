@@ -7,6 +7,7 @@ import s from "./Search.module.css";
 
 const SearchContainer = (props) => {
 
+  let stateMainPage = props.mainPage
   let stateApp = props.app;
   let state = props.search;
 
@@ -19,14 +20,29 @@ const SearchContainer = (props) => {
 
   const inputSearch = (e) => {
     props.setValue(e.target.value);
-    let newState = stateApp.countriesCardsData.slice();
 
-    const filterArr = newState
-      .filter((p) => {
-        return  p.country.toLowerCase().includes(e.target.value) || p.capital.toLowerCase().includes(e.target.value) || p.country.toUpperCase().includes(e.target.value) || p.capital.toUpperCase().includes(e.target.value);
-      }).slice(0, 15);
+    const testarr = stateMainPage.copyCountryData.slice().map((obj)=>{
+      obj.display = true
+
+      const include = obj.country.toLowerCase().includes(e.target.value.toLowerCase()) || obj.capital.toLowerCase().includes(e.target.value.toLowerCase())
+
+      if(include !== true){
+        obj.display = false
+      }
+
+      return obj
+    })
+
+    // let newState = stateApp.countriesCardsData.slice();
+
+    // const filterArr = newState
+    //   .filter((p) => {
+    //     return  p.country.toLowerCase().includes(e.target.value) || p.capital.toLowerCase().includes(e.target.value) || p.country.toUpperCase().includes(e.target.value) || p.capital.toUpperCase().includes(e.target.value);
+    //   }).slice(0, 15);
       
-      props.setCopyContriesDataAC(filterArr);
+    //   props.setCopyContriesDataAC(filterArr);
+    
+    props.setCopyContriesDataAC(testarr);
   };
 
   const buttonSearch = (value) => {

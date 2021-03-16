@@ -1,20 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Country from './Country';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { setCurrentCountryDataAC } from '../../redux/mainPage-reducer';
 
 const CountryContainer = (props) => {
+    const [loding, setLoding] = useState(false)
 
+    useEffect(()=>{
+        let countryDataId = props.match.params.countryId
+        let countryDataInfo = props.countriesData.find(countryData => countryData.id === countryDataId)
+        
+        props.setCurrentCountryData(countryDataInfo);
 
-    let countryDataId = props.match.params.countryId
-    let countryDataInfo = props.countriesData.find(countryData => countryData.id === countryDataId)
+        setLoding(true)
+    },[])
+
     
-    props.setCurrentCountryData(countryDataInfo);
-
 
     return (
-        <Country />
+        <>
+        {loding !== false ? <Country /> : "loading"} 
+        </>
     )
 }
 
