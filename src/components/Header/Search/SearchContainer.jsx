@@ -21,28 +21,28 @@ const SearchContainer = (props) => {
   const inputSearch = (e) => {
     props.setValue(e.target.value);
 
-    const testarr = stateMainPage.copyCountryData.slice().map((obj)=>{
-      obj.display = true
+    // const testarr = stateMainPage.copyCountryData.slice().map((obj)=>{
+    //   obj.display = true
 
-      const include = obj.country.toLowerCase().includes(e.target.value.toLowerCase()) || obj.capital.toLowerCase().includes(e.target.value.toLowerCase())
+    //   const include = obj.country.toLowerCase().includes(e.target.value.toLowerCase()) || obj.capital.toLowerCase().includes(e.target.value.toLowerCase())
 
-      if(include !== true){
-        obj.display = false
-      }
+    //   if(include !== true){
+    //     obj.display = false
+    //   }
 
-      return obj
-    })
+    //   return obj
+    // })
 
-    // let newState = stateApp.countriesCardsData.slice();
+    let newState = stateApp.countriesCardsData.slice();
 
-    // const filterArr = newState
-    //   .filter((p) => {
-    //     return  p.country.toLowerCase().includes(e.target.value) || p.capital.toLowerCase().includes(e.target.value) || p.country.toUpperCase().includes(e.target.value) || p.capital.toUpperCase().includes(e.target.value);
-    //   }).slice(0, 15);
+    const filterArr = newState
+      .filter((p) => {
+        return  p.country.toLowerCase().includes(e.target.value) || p.capital.toLowerCase().includes(e.target.value) || p.country.toUpperCase().includes(e.target.value) || p.capital.toUpperCase().includes(e.target.value);
+      }).slice(0, 15);
       
-    //   props.setCopyContriesDataAC(filterArr);
+      props.setCopyContriesDataAC(filterArr);
     
-    props.setCopyContriesDataAC(testarr);
+    // props.setCopyContriesDataAC(testarr);
   };
 
   const buttonSearch = (value) => {

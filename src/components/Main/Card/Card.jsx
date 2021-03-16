@@ -69,9 +69,8 @@ const Card = ({ countryId, capitalIMG, country, capital, display }) => {
           <div className={s.cardInfo}>
             <h1>
               {country}
-              <br />
-              {capital}
             </h1>
+            <h2>{capital}</h2>
           </div>
         </animated.div>
       </div>
