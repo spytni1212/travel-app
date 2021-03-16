@@ -5,7 +5,13 @@ import { setCopyContriesDataAC } from '../../redux/mainPage-reducer';
 
 const MainContainer = (props) => {
     useEffect(()=>{
-        props.setCopyContriesDataAC(props.app.countriesCardsData)
+        const newArr = props.app.countriesCardsData.slice().map((obj)=>{
+            return obj= {
+                ...obj,
+                display: true
+            }; 
+        })
+        props.setCopyContriesDataAC(newArr)
     },[])
 
     return (<Main {...props}/>)

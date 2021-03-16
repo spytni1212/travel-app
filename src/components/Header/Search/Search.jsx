@@ -1,11 +1,13 @@
 import React from 'react'
 import s from './Search.module.css'
 
-const Search = ({inputSearch, value}) => {
 
+const Search = ({inputSearch, value, buttonSearch, clearValur}) => {
     return (
         <div className={s.searchContainer}>
-            <input type="text" value={value} placeholder='search country...' onChange={inputSearch}/>
+            <input className={s.searchBar} autoFocus={true} type="text" value={value} placeholder='search country...' onChange={inputSearch}/>
+            {value !== '' && <button className={s.removeSearchButton} onClick={()=>{clearValur()}}>X</button>}
+            <button className={s.searchButton} onClick={()=>{buttonSearch(value)}}>&#128269;</button>
         </div>
     )
 }

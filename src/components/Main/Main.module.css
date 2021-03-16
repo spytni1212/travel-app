@@ -8,10 +8,15 @@
 }
 
 .cardsContainer {
-    padding: 60px 0;
+    /* padding: 60px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-flow: row wrap;
     column-gap: 20px;
-    row-gap: 40px;
+    row-gap: 40px; */
+
+    padding: 40px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
