@@ -1,12 +1,29 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { YMaps, Map, Placemark} from 'react-yandex-maps';
 import s from './Map.module.css';
 
-const Map = (props) => {
-    return (
-        <div className={s.mapContainer}>
-            <div className={s.map}>Map</div>
-        </div>
+const MapContainer = (props) => {
+
+    return (    
+        <YMaps query = { { load: 'package.full',  lang: 'en_US'} }>
+            <div className={s.mapContainer}>            
+                <Map defaultState={{ center: props.capitalCoordinates, zoom: 7 }} className={s.map}>
+                    <Placemark geometry={props.capitalCoordinates}></Placemark>
+                </Map>
+            </div>
+        </YMaps>
     )
+    
 }
 
-export default Map;
+
+let mapStateToProps = (state) => {
+    return {
+        capitalCoordinates: state.mainPage.currentCountry.capitalCoordinates,
+        country: state.mainPage.currentCountry.country
+
+    }
+}
+
+export default connect(mapStateToProps)(MapContainer)
