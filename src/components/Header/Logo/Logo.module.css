@@ -1,0 +1,54 @@
+.logo {
+    padding: 10px;
+    text-decoration: none;
+}
+
+.logoText {
+    font-size: 3rem;
+    color: #ffff;
+    text-shadow: 0 1px 0 #ccc,
+}
+
+:root {
+    --mainColor: #181717d2;
+}
+   
+.logoText {
+  background:
+      linear-gradient(
+        to right,
+        var(--mainColor) 0%,
+        var(--mainColor) 5px,
+        transparent 5px
+      );
+  background-repeat: repeat-x;
+  background-size: 100%;
+  color: #ffff;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+.logoText:hover {
+  background:
+    linear-gradient(
+      to right,
+      var(--mainColor) 0%,
+      var(--mainColor) 5px,
+      transparent
+    );
+}
+
+
+
+@media (max-width: 767px) {
+    .logoText {
+        font-size: 2.5rem;
+    }
+    
+}
+
+@media (max-width: 460px) {
+    .logoText{
+      font-size: 2rem;
+    }
+}

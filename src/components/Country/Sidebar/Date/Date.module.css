@@ -1,0 +1,11 @@
+.dateContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 460px) {
+    .dateContainer {
+        padding: 10px 0px;
+    }
+}
