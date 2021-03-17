@@ -7,7 +7,7 @@ const Video = (props) => {
     return (
         <div className={s.videoContainer}>
             <div className={s.video}>
-                <ReactPlayer url ={props.videoAboutCountry} controls />
+                <ReactPlayer url ={props.videoAboutCountry} controls width='100%' height='100%'/>
             </div>
         </div>
     )

@@ -43,3 +43,9 @@
         flex: 0 1 50%;
     }
 }
+
+/* @media (max-width: 420px) {
+    .countryDescriptionContainer {
+        max-width: 400px;
+    }
+} */
