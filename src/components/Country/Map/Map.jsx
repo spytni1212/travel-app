@@ -8,7 +8,7 @@ const MapContainer = (props) => {
     return (    
         <YMaps query = { { load: 'package.full',  lang: 'en_US'} }>
             <div className={s.mapContainer}>            
-                <Map defaultState={{ center: props.capitalCoordinates, zoom: 7 }} className={s.map}>
+                <Map defaultState={{ center: props.capitalCoordinates, zoom: 7 }} width='100%' height='100%'>
                     <Placemark geometry={props.capitalCoordinates}></Placemark>
                 </Map>
             </div>

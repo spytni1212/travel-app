@@ -1,9 +1,46 @@
 .mapContainer {
-    padding: 50px 0;
+    width: 1000px;
+    height: 500px;
+    padding: 30px 0;
 }
 
 .map {
-    width: 650px;
-    height: 250px;
     background-color: rgb(185, 144, 54);
+}
+
+@media(max-width:1050px){
+    .mapContainer{
+        max-width: 800px;
+        height: 400px;
+    }
+}
+@media(max-width:850px){
+    .mapContainer{
+        max-width:700px;
+        height: 350px;
+    }
+}
+@media(max-width:780px){
+    .mapContainer{
+        max-width:600px;
+        height: 300px;
+    }
+}
+@media(max-width:630px){
+    .mapContainer{
+        max-width:500px;
+        height: 250px;
+    }
+}
+@media(max-width:530px){
+    .mapContainer{
+        max-width:400px;
+        height: 200px;
+    }
+}
+@media(max-width:440px){
+    .mapContainer{
+        max-width:310px;
+        height: 155px;
+    }
 }

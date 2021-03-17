@@ -31,7 +31,7 @@ export default class Attractions extends Component {
           <Slider {...settings}>
             {this.itemsArray.map((item, index) => {
               return (
-                <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', height:'778px'}}>
+                <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', height:'778px'}} key={index}>
                   <div className="attractionSlider__text-container">
                     <h3>{attractionDescription[country][index].name}</h3>
                     <p className='attractionDescription'>{attractionDescription[country][index].description}</p>

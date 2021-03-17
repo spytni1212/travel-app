@@ -13,7 +13,7 @@ const Country = (props) => {
             <CountryDescription />
             <AttractionsContainer />
             <Video />
-            {/* <Map /> */}
+            <Map />
         </div>
     )
 }
