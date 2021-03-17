@@ -12,7 +12,6 @@ const Main = (props) => {
 
   let countriesCards = state.copyCountryData.map((countryCard) => (
       <CSSTransition
-        // in={countryCard.display}
         key={countryCard.id}
         timeout={500}
         unmountOnExit

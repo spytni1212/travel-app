@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setCurBYN, setCurUSD, setCurEUR } from '../../../../redux/currency-reducer';
+import apiKeys from '../../../../ApiKeys';
 import s from './Currency.module.css';
 
 class CurrencyContainer extends React.Component {
@@ -9,7 +10,7 @@ class CurrencyContainer extends React.Component {
         const courses = ['BYN', 'USD', 'EUR'];
         const currencySetters = [this.props.setCurBYN, this.props.setCurUSD, this.props.setCurEUR];
         for (let i = 0; i < courses.length; i++) {
-            fetch(`https://free.currconv.com/api/v7/convert?q=${this.props.countryCurrency.currency}_${courses[i]}&compact=ultra&apiKey=a138a28584b98a438044`)
+            fetch(`https://free.currconv.com/api/v7/convert?q=${this.props.countryCurrency.currency}_${courses[i]}&compact=ultra&apiKey=${apiKeys.currency}`)
             .then(data => data.json())
             .then(res => currencySetters[i](res[`${this.props.countryCurrency.currency}_${courses[i]}`].toFixed(2)))
         }

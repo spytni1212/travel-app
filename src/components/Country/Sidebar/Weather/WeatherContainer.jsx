@@ -4,10 +4,11 @@ import { setWeatherDescriptionAC, setIconAC, setTemperatureAC, setWindAC, setHum
 import axios from 'axios';
 import s from './Weather.module.css';
 import Weather from './Weather';
+import apiKeys from '../../../../ApiKeys'
 
 class WeatherContainer extends React.Component {
     componentDidMount(){
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.props.countryData.capital}&lang=en&appid=33ee77f2c926949a60a1ec25d1144a3c&units=metric`)
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.props.countryData.capital}&lang=en&appid=${apiKeys.weather}&units=metric`)
         .then(response => {
             const weatherDescription =  response.data.weather[0].description;
             const icon = response.data.weather[0].id;

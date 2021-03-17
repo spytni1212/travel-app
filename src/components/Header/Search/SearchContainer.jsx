@@ -20,18 +20,6 @@ const SearchContainer = (props) => {
   const inputSearch = (e) => {
     props.setValue(e.target.value);
 
-    // const testarr = stateMainPage.copyCountryData.slice().map((obj)=>{
-    //   obj.display = true
-
-    //   const include = obj.country.toLowerCase().includes(e.target.value.toLowerCase()) || obj.capital.toLowerCase().includes(e.target.value.toLowerCase())
-
-    //   if(include !== true){
-    //     obj.display = false
-    //   }
-
-    //   return obj
-    // })
-
     let newState = stateApp.countriesCardsData.slice();
 
     const filterArr = newState
@@ -41,7 +29,6 @@ const SearchContainer = (props) => {
       
       props.setCopyContriesDataAC(filterArr);
     
-    // props.setCopyContriesDataAC(testarr);
   };
 
   const buttonSearch = (value) => {
