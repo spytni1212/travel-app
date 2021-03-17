@@ -12,9 +12,11 @@ const Main = (props) => {
 
   let countriesCards = state.copyCountryData.map((countryCard) => (
       <CSSTransition
-        in={countryCard.display}
+        // in={countryCard.display}
         key={countryCard.id}
-        timeout={500} 
+        timeout={500}
+        unmountOnExit
+        appear 
         classNames="item"
       >
     <NavLink to={`/country/${countryCard.id}`} >
@@ -28,6 +30,8 @@ const Main = (props) => {
       <div className={s.mainWrapper}>
         <div className={s.cardsContainer}>
           <TransitionGroup
+            timeout={500}
+            component="div"
             className={s.cardsContainer}
           >
             {countriesCards}

@@ -69,7 +69,7 @@ const Card = ({ countryId, capitalIMG, country, capital, display }) => {
           <div className={s.cardInfo}>
             <h1>
               {country}
-            </h1>
+            </h1 >
             <h2>{capital}</h2>
           </div>
         </animated.div>
@@ -78,16 +78,3 @@ const Card = ({ countryId, capitalIMG, country, capital, display }) => {
 };
 
 export default Card;
-
-// let cathedral = "./img/Russia/cathedral-removebg.png";
-// let img = {
-//   backgroundImage: `url(${capitalIMG})`,
-// };
-
-{
-  /* <div className={s.card}>
-      <div class={s.background} style={img}></div>
-      <img className={s.img} src={cathedral}/>
-      <div className={s.text}>{country}<br/>{capital}</div>      
-    </div> */
-}

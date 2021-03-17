@@ -48,9 +48,7 @@
 }
 
 @media (max-width: 460px) {
-    
+    .logoText{
+      font-size: 2rem;
+    }
 }
-
-@media (max-width: 320px) {
-
-} 

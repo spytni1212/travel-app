@@ -45,6 +45,9 @@
 .slick-dots li {
     width:200px;
 }
+h2{
+    color:white;
+}
 @media(max-width:1050px){
     .attractionSlider{
         max-width: 800px;
@@ -95,6 +98,9 @@
     }
     .attractionDescription{
         font-size: 14px;
+    }
+    h2{
+        font-size: 20px;
     }
 }
 @media(max-width:440px){
