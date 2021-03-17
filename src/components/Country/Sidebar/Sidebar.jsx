@@ -6,12 +6,10 @@ import WeatherContainer from './Weather/WeatherContainer';
 
 const Sidebar = (props) => {
     return (
-        <div className={s.sidebarContainer}>
-            <div className={s.sidebar}>
-                <DateContainer />
-                <WeatherContainer />
-                <CurrencyContainer />
-            </div>
+        <div className={s.sidebar}>
+            <DateContainer />
+            <WeatherContainer />
+            <CurrencyContainer />
         </div>
     )
 }

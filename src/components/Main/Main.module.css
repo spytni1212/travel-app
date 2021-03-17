@@ -1,3 +1,4 @@
+
 .mainWrapper {
     margin: 0 auto;
     max-width: 1200px;
@@ -8,15 +9,14 @@
 }
 
 .cardsContainer {
-    /* padding: 60px 0;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-    column-gap: 20px;
-    row-gap: 40px; */
-
-    padding: 40px 80px;
+    padding: 40px 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+@media (max-width: 540px) {
+    .cardsContainer {
+        padding: 0;
+    }
 }

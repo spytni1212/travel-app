@@ -3,26 +3,43 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 1em;
 }
 
 .description {
-    flex: 0 1 70%;
-    font-size: 20px;
+    flex-basis:57%;
+    color: #f3eeee;
+    background: #00000029;
+    padding: 0.8em;
+    border-radius: 10px;
+    font-size: 18px;
     text-align: justify;
     font-weight: bold;
 }
 
 .imageContainer {
-    position: relative;
-    flex: 0 1 27%;
-    min-height: 200px;
+    flex-basis:43%;
 }
 
 .imageCountry {
-    position: absolute;
     max-width: 100%;
     object-fit: cover;
-    border: 3px solid black;
+    border: 2px solid #64505c;
     border-radius: 30px;
     background-color: rgb(123, 151, 95);
+}
+
+@media (max-width: 767px) {
+    .countryDescriptionContainer {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .description {
+        flex: 0 1 50%;
+    }
+
+    .imageContainer {
+        flex: 0 1 50%;
+    }
 }

@@ -3,6 +3,7 @@
 .main {
     display: flex;
     flex-direction: column;
+    padding: 0.8em;
     min-height: 100vh;
 }
 

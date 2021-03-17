@@ -29,11 +29,6 @@ const Main = (props) => {
         <div className={s.cardsContainer}>
           <TransitionGroup
             className={s.cardsContainer}
-            // transitionName="location-cards"
-            // transitionAppear={true}
-            // transitionAppearTimeout={400}
-            // transitionEnterTimeout={400}
-            // transitionLeaveTimeout={400}
           >
             {countriesCards}
           </TransitionGroup>

@@ -38,3 +38,37 @@
     );
 }
 
+@media (max-width: 767px) {
+    .logo {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 540px) {
+    .logo {
+        margin: 0 auto;
+        font-size: 45px;
+        text-align: center;
+    }
+}
+
+
+/* @media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 992px) {
+    
+}
+
+@media (max-width: 767px) {
+    
+}
+
+@media (max-width: 460px) {
+    
+}
+
+@media (max-width: 320px) {
+
+} */
